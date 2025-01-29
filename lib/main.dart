@@ -103,12 +103,13 @@ class _VpnScreenState extends State<VpnScreen> {
       // Load the configuration file dynamically from assets
       final ovpnConfig = await rootBundle.loadString('assets/openvpn.ovpn');
 
+      //https://www.freeopenvpn.org/premium.php?cntid=USA&lang=en#google_vignette
       // Connect using the loaded configuration
       _vpn.connect(
         ovpnConfig,
         "us1.freeopenvpn.online", // The VPN server address
         username: "freeopenvpn",
-        password: "332654846",
+        password: "043063473",
         bypassPackages: [], // Add any package names to exclude from VPN if needed
         certIsRequired: true, // iOS specific: Set true to avoid "connecting" stuck issues
       );
