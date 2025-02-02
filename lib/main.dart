@@ -36,8 +36,8 @@ class _VpnScreenState extends State<VpnScreen> {
     _vpn = OpenVPN(onVpnStatusChanged: _onVpnStatusChanged, onVpnStageChanged: _onVpnStageChanged);
     // Initialize OpenVPN
     _vpn.initialize(
-      groupIdentifier: "group.com.example.openvpn", // Use your app's group identifier (for iOS, it's required)
-      providerBundleIdentifier: "com.example.openvpn", // Your app's bundle identifier
+      groupIdentifier: "group.com.hashmaker.openvpn", // Use your app's group identifier (for iOS, it's required)
+      providerBundleIdentifier: "com.hashmaker.openvpn", // Your app's bundle identifier
     ).then((_) {
       print("OpenVPN initialized successfully!");
     }).catchError((error) {
@@ -109,7 +109,7 @@ class _VpnScreenState extends State<VpnScreen> {
         ovpnConfig,
         "us1.freeopenvpn.online", // The VPN server address
         username: "freeopenvpn",
-        password: "043063473",
+        password: "052204056",
         bypassPackages: [], // Add any package names to exclude from VPN if needed
         certIsRequired: true, // iOS specific: Set true to avoid "connecting" stuck issues
       );
