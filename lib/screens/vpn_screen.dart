@@ -85,7 +85,7 @@ class _VpnScreenState extends State<VpnScreen> {
   Future<void> _fetchPublicIP() async {
     try {
       final response =
-          await http.get(Uri.parse("https://api64.ipify.org?format=json"));
+      await http.get(Uri.parse("https://api64.ipify.org?format=json"));
 
       if (response.statusCode == 200) {
         final Map<String, dynamic> data = json.decode(response.body);
@@ -107,7 +107,7 @@ class _VpnScreenState extends State<VpnScreen> {
 
   void _onVpnStageChanged(VPNStage stage, String message) {
     String stageDescription =
-        stage.toString().split('.').last.replaceAll('_', ' ');
+    stage.toString().split('.').last.replaceAll('_', ' ');
     setState(() {
       _stage = stageDescription;
       _isConnected = stage == VPNStage.connected;
